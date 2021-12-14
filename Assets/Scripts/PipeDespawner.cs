@@ -6,6 +6,6 @@ public class PipeDespawner : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(collision.attachedRigidbody.gameObject);
+        collision.attachedRigidbody.gameObject.SetActive(false);
     }
 }

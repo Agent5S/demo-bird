@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PipeSpawner : MonoBehaviour
 {
-    public GameObject prefab;
+    public Rigidbody2D prefab;
     public Vector2 origin;
     public float scrollSpeed;
     public float minHeight;
@@ -13,6 +13,7 @@ public class PipeSpawner : MonoBehaviour
 
     private bool continueCoroutine = true;
     private WaitForSeconds wait;
+    private List<Rigidbody2D> pipePool = new List<Rigidbody2D>();
 
     private void Awake()
     {
@@ -36,11 +37,29 @@ public class PipeSpawner : MonoBehaviour
             var origin = this.origin;
             origin.y += minHeight + Random.value * heightDelta;
 
-            var pipe = Instantiate(prefab);
-            var rb = pipe.GetComponent<Rigidbody2D>();
-            rb.position = origin;
+            var rb = dequeuePipe();
+            rb.transform.position = origin;
+            rb.gameObject.SetActive(true);
             rb.velocity = new Vector2(-scrollSpeed, 0);
             yield return wait;
         }
+    }
+
+    //FIXME: Dequeueing takes linear time
+    private Rigidbody2D dequeuePipe()
+    {
+        for (int i = 0; i < pipePool.Count; i++)
+        {
+            var rb = pipePool[i];
+            if (!rb.gameObject.activeInHierarchy)
+            {
+                return rb;
+            }
+        }
+
+        //Create pipe and add to pool if none is available
+        var pipe = Instantiate(prefab);
+        this.pipePool.Add(pipe);
+        return pipe;
     }
 }
