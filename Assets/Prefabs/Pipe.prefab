@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2535417020172297563}
   - component: {fileID: 172726880515727873}
   - component: {fileID: 1972483781421688321}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8029748069111829602}
-  m_Layer: 0
+  - component: {fileID: 3725378393822561176}
+  m_Layer: 7
   m_Name: Pipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,6 +143,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &3725378393822561176
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2831034809130169483}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 6
 --- !u!1 &3731157313609131376
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,7 +175,7 @@ GameObject:
   - component: {fileID: 3412484686165388976}
   - component: {fileID: 9101461203563673186}
   - component: {fileID: 4928330313323604188}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +283,7 @@ GameObject:
   m_Component:
   - component: {fileID: 627622886922635081}
   - component: {fileID: 8882860087178773124}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
