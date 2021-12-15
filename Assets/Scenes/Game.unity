@@ -507,7 +507,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -688,6 +688,6 @@ MonoBehaviour:
   prefab: {fileID: 3725378393822561176, guid: 80c3c56ea3a8d4eab9e9aaee9661dd7f, type: 3}
   origin: {x: 10, y: 0}
   scrollSpeed: 5
-  minHeight: 0
-  heightDelta: 0
+  minHeight: -2
+  heightDelta: 4
   spawnInterval: 2

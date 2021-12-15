@@ -34,8 +34,9 @@ public class PipeSpawner : MonoBehaviour
     {
         while (continueCoroutine)
         {
+            var rand = Random.value;
             var origin = this.origin;
-            origin.y += minHeight + Random.value * heightDelta;
+            origin.y = minHeight + (rand * heightDelta);
 
             var rb = dequeuePipe();
             rb.transform.position = origin;

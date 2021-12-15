@@ -4,13 +4,29 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    private int borderLayer;
+    private int pipeLayer;
+    private int scoreLayer;
+
+    private void Awake()
     {
-        Debug.Log("Game over");
+        this.borderLayer = LayerMask.NameToLayer("Border");
+        this.pipeLayer = LayerMask.NameToLayer("Pipe");
+        this.scoreLayer = LayerMask.NameToLayer("ScoreArea");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Point scored");
+        if (collision.gameObject.layer == borderLayer)
+        {
+            Debug.Log("Hit border");
+
+        } else if (collision.gameObject.layer == pipeLayer)
+        {
+            Debug.Log("Hit pipe");
+        } else if (collision.gameObject.layer == scoreLayer)
+        {
+            Debug.Log("Point scored");
+        }
     }
 }
