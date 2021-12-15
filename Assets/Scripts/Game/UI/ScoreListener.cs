@@ -5,8 +5,6 @@ using TMPro;
 
 public class ScoreListener : MonoBehaviour
 {
-    public GameState state;
-
     private TextMeshProUGUI text;
 
     private void Awake()
@@ -16,7 +14,7 @@ public class ScoreListener : MonoBehaviour
 
     private void OnScoreChange()
     {
-        this.text.text = $"{state.Score}";
+        this.text.text = $"{GameState.global.Score}";
     }
 
     private void OnEnable()

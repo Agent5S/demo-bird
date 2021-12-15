@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameState : MonoBehaviour
 {
+    public static GameState global;
+
     public delegate void ScoreChange();
     public static event ScoreChange OnScoreChange;
 
@@ -38,5 +40,6 @@ public class GameState : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         this.health = maxHealth;
+        GameState.global = this;
     }
 }

@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class HealthListener : MonoBehaviour
 {
-    public GameState state;
-
     private Slider healthbar;
 
     private void Awake()
@@ -16,7 +14,7 @@ public class HealthListener : MonoBehaviour
 
     private void OnHealthChange()
     {
-        Debug.Log($"Health: {state.Health}");
+        var state = GameState.global;
         this.healthbar.value = state.Health / state.maxHealth;
     }
 
