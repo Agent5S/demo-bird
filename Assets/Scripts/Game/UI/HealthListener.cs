@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HealthListener : MonoBehaviour
 {
@@ -16,6 +17,11 @@ public class HealthListener : MonoBehaviour
     {
         var state = GameState.global;
         this.healthbar.value = state.Health / state.maxHealth;
+
+        if (state.Health <= 0)
+        {
+            SceneManager.LoadSceneAsync("Game Over");
+        }
     }
 
     private void OnEnable()
