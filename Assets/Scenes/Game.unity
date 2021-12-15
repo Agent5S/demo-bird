@@ -559,6 +559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54a966cada2664447a58fc30a80e7d96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shaker: {fileID: 2091729871}
 --- !u!1 &2091729867
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,6 +569,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2091729870}
+  - component: {fileID: 2091729871}
   - component: {fileID: 2091729869}
   - component: {fileID: 2091729868}
   m_Layer: 0
@@ -642,6 +644,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2091729871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091729867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee4b36b3c423a4435bcced396603152f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeStrength: 0.1
+  shakeTime: 0.3
 --- !u!1 &2142594024
 GameObject:
   m_ObjectHideFlags: 0

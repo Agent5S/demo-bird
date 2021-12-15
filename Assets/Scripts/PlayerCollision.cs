@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
+    public CameraShake shaker;
     private int borderLayer;
     private int pipeLayer;
     private int scoreLayer;
@@ -20,10 +21,11 @@ public class PlayerCollision : MonoBehaviour
         if (collision.gameObject.layer == borderLayer)
         {
             Debug.Log("Hit border");
-
+            StartCoroutine(shaker.Shake());
         } else if (collision.gameObject.layer == pipeLayer)
         {
             Debug.Log("Hit pipe");
+            StartCoroutine(shaker.Shake());
         } else if (collision.gameObject.layer == scoreLayer)
         {
             Debug.Log("Point scored");
