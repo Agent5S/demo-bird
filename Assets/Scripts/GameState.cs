@@ -12,6 +12,9 @@ public class GameState : MonoBehaviour
     public delegate void HealthChange();
     public static event HealthChange OnHealthChange;
 
+    public delegate void Died();
+    public static event Died OnDeath;
+
     public float maxHealth;
 
     private int score;
@@ -33,6 +36,10 @@ public class GameState : MonoBehaviour
         {
             health = value;
             OnHealthChange?.Invoke();
+            if (health <= 0)
+            {
+                OnDeath?.Invoke();
+            }
         }
     }
 
