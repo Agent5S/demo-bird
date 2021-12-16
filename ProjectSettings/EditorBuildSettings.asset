@@ -20,5 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game Over.unity
     guid: 54fbdd448839248faa5d7ab2af1d200e
+  - enabled: 1
+    path: Assets/Scenes/SkinSelector.unity
+    guid: 1e08bc5da450d4f17900f1ad57695cc3
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 072d3ae2b70554b6f930f048abe93488, type: 2}
