@@ -20,7 +20,7 @@ public class HealthListener : MonoBehaviour
 
         if (state.Health <= 0)
         {
-            SceneManager.LoadSceneAsync("Game Over");
+            SceneManager.LoadSceneAsync(2);
         }
     }
 

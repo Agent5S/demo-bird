@@ -59,7 +59,7 @@ public class PipeSpawner : MonoBehaviour
         }
 
         //Create pipe and add to pool if none is available
-        var pipe = Instantiate(prefab);
+        var pipe = Instantiate(prefab, transform);
         this.pipePool.Add(pipe);
         return pipe;
     }
