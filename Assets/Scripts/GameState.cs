@@ -27,6 +27,7 @@ public class GameState : MonoBehaviour
         get => skin;
         set {
             this.skin = value;
+            PlayerPrefs.SetInt("Skin", skin);
             OnUpdateSkin?.Invoke();
         }
     }
@@ -66,5 +67,6 @@ public class GameState : MonoBehaviour
         }
         this.health = maxHealth;
         GameState.global = this;
+        this.Skin = PlayerPrefs.GetInt("Skin");
     }
 }

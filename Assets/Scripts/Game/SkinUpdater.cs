@@ -27,7 +27,6 @@ public class SkinUpdater : MonoBehaviour
             new AnimatorOverrideController(animator.runtimeAnimatorController);
         newAnim["Fly 1"] = flyClips[GameState.global.Skin];
         newAnim["Dead 1"] = deathClips[GameState.global.Skin];
-        Debug.Log(newAnim.animationClips[0].name);
         animator.runtimeAnimatorController = newAnim;
         animator.runtimeAnimatorController.name = "Override Player Animator";
     }

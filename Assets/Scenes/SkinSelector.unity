@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 230834706}
   - component: {fileID: 230834705}
   m_Layer: 5
-  m_Name: Cyan
+  m_Name: Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1267,7 +1267,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 847c6f5fc6b27445da91bb68c952a7a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  preview: {fileID: 1303697817}
   selected: 0
+  sprites:
+  - {fileID: -2298939645060189070, guid: b4883605538b74f6cbcb9ecf1dda5074, type: 3}
+  - {fileID: -7242686801062381260, guid: c42744d329b0346f1a82099cf0fa9c99, type: 3}
+  - {fileID: -8979573976647544128, guid: c75670aadd6da4ef5b601be914a145cf, type: 3}
 --- !u!1 &1772759383
 GameObject:
   m_ObjectHideFlags: 0
@@ -1382,7 +1387,7 @@ GameObject:
   - component: {fileID: 1832855043}
   - component: {fileID: 1832855042}
   m_Layer: 5
-  m_Name: Yellow
+  m_Name: Cyan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1515,7 +1520,7 @@ GameObject:
   - component: {fileID: 1905069771}
   - component: {fileID: 1905069770}
   m_Layer: 5
-  m_Name: Red
+  m_Name: Yellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
