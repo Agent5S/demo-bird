@@ -7,6 +7,7 @@ public class PlayerDeathListener : MonoBehaviour
 {
     public static readonly int FlyingParamId = Animator.StringToHash("Flying");
 
+    private PlayerJump jump;
     private Animator animator;
     private new Collider2D collider;
 
@@ -14,6 +15,7 @@ public class PlayerDeathListener : MonoBehaviour
 
     private void Awake()
     {
+        this.jump = GetComponent<PlayerJump>();
         this.animator = GetComponent<Animator>();
         this.collider = GetComponent<Collider2D>();
         this.gameOverLayer = LayerMask.NameToLayer("GameOver");
@@ -26,7 +28,7 @@ public class PlayerDeathListener : MonoBehaviour
         SceneManager.LoadSceneAsync(4, LoadSceneMode.Additive);
         collider.isTrigger = false;
         gameObject.layer = gameOverLayer;
-        //Time.timeScale = 0;
+        jump.enabled = false;
     }
 
     private void OnEnable()
