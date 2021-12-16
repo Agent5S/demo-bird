@@ -15,6 +15,7 @@ public class GameState : MonoBehaviour
     public delegate void Died();
     public static event Died OnDeath;
 
+    public GameObject[] singleLoadObjects;
     public float maxHealth;
 
     private int score;
@@ -45,7 +46,11 @@ public class GameState : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        for (int i = 0; i < singleLoadObjects.Length; i++)
+        {
+            var obj = singleLoadObjects[i];
+            DontDestroyOnLoad(obj);
+        }
         this.health = maxHealth;
         GameState.global = this;
     }
