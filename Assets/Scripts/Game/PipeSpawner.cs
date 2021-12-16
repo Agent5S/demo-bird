@@ -23,6 +23,7 @@ public class PipeSpawner : MonoBehaviour
     private void OnEnable()
     {
         StartCoroutine(SpawnPipe());
+        GameState.OnDeath += () => this.enabled = false;
     }
 
     private void OnDisable()
