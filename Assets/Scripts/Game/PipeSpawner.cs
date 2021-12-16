@@ -23,12 +23,13 @@ public class PipeSpawner : MonoBehaviour
     private void OnEnable()
     {
         StartCoroutine(SpawnPipe());
-        GameState.OnDeath += () => this.enabled = false;
+        GameState.OnDeath += DisableSelf;
     }
 
     private void OnDisable()
     {
         StopCoroutine(SpawnPipe());
+        GameState.OnDeath -= DisableSelf;
     }
 
     private IEnumerator SpawnPipe()
@@ -63,5 +64,10 @@ public class PipeSpawner : MonoBehaviour
         var pipe = Instantiate(prefab, transform);
         this.pipePool.Add(pipe);
         return pipe;
+    }
+
+    private void DisableSelf()
+    {
+        this.enabled = false;
     }
 }
