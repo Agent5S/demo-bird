@@ -8,10 +8,10 @@ public class GameLoader
     [RuntimeInitializeOnLoadMethod]
     public static void LoadGame()
     {
-        var op = SceneManager.LoadSceneAsync(3, LoadSceneMode.Additive);
+        var op = SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
         op.completed += _ =>
         {
-            SceneManager.UnloadSceneAsync(3);
+            SceneManager.UnloadSceneAsync(2);
         };
     }
 }

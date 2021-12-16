@@ -9,5 +9,6 @@ public class StartGame : MonoBehaviour
     public void LoadGame()
     {
         SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync(3, LoadSceneMode.Additive);
     }
 }

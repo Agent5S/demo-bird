@@ -20,7 +20,8 @@ public class HealthListener : MonoBehaviour
 
         if (state.Health <= 0)
         {
-            SceneManager.LoadSceneAsync(2);
+            SceneManager.UnloadSceneAsync(3);
+            SceneManager.LoadSceneAsync(4, LoadSceneMode.Additive);
         }
     }
 
