@@ -27,6 +27,8 @@ public class CameraShake : MonoBehaviour
 
         while (remainingShakeTime > 0)
         {
+            var dt = Time.deltaTime;
+            if (dt == 0) { break; }
             var y = currentStrength * (2 * Random.value - 1);
 
             var position = transform.position;
@@ -34,7 +36,7 @@ public class CameraShake : MonoBehaviour
             this.transform.position = position;
 
             this.currentStrength = Mathf.MoveTowards(currentStrength, 0, shakeStrength * Time.deltaTime);
-            this.remainingShakeTime -= Time.deltaTime;
+            this.remainingShakeTime -= dt;
             yield return null;
         }
 
