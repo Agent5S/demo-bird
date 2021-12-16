@@ -18,7 +18,9 @@ public class SelectSkin : MonoBehaviour
 
     private void Start()
     {
-        preview.sprite = sprites[GameState.global.Skin];
+        var current = GameState.global.Skin;
+        this.selected = current;
+        preview.sprite = sprites[current];
     }
 
     public void AcceptSkin()
