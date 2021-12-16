@@ -579,6 +579,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 999255074}
+  - component: {fileID: 999255075}
   - component: {fileID: 999255073}
   - component: {fileID: 999255072}
   m_Layer: 0
@@ -672,6 +673,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &999255075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999255071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2c26b21c7e0543a18090f3df45b9830, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flyClips:
+  - {fileID: 7400000, guid: e9cbe3d2986234dd58455a33022044c1, type: 2}
+  - {fileID: 7400000, guid: f6c1fb831425146339c01f379512c44b, type: 2}
+  - {fileID: 7400000, guid: 436a3023a339a41d38911595be765cf0, type: 2}
+  deathClips:
+  - {fileID: 7400000, guid: 9f4cfe10db63842c3a1bf6a18e805a1f, type: 2}
+  - {fileID: 7400000, guid: bbf799f411d35419d82f258eefd8435a, type: 2}
+  - {fileID: 7400000, guid: b854910e94d5b4674b564b1e171101a6, type: 2}
 --- !u!1 &1560132009
 GameObject:
   m_ObjectHideFlags: 0

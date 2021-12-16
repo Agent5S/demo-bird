@@ -364,6 +364,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3826ac0b88c1410c931614f2a0ffaf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animations:
+  - {fileID: 7400000, guid: e9cbe3d2986234dd58455a33022044c1, type: 2}
+  - {fileID: 7400000, guid: f6c1fb831425146339c01f379512c44b, type: 2}
+  - {fileID: 7400000, guid: 436a3023a339a41d38911595be765cf0, type: 2}
   singleLoadObjects:
   - {fileID: 669677607}
   - {fileID: 426977591}

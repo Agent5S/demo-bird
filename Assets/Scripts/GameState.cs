@@ -15,8 +15,21 @@ public class GameState : MonoBehaviour
     public delegate void Died();
     public static event Died OnDeath;
 
+    public delegate void UpdateSkin();
+    public static event UpdateSkin OnUpdateSkin;
+
     public GameObject[] singleLoadObjects;
     public float maxHealth;
+
+    private int skin;
+    public int Skin
+    {
+        get => skin;
+        set {
+            this.skin = value;
+            OnUpdateSkin?.Invoke();
+        }
+    }
 
     private int score;
     public int Score

@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8979573976647544128, guid: c75670aadd6da4ef5b601be914a145cf, type: 3}
+  m_Sprite: {fileID: -7242686801062381260, guid: c42744d329b0346f1a82099cf0fa9c99, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -280,7 +280,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 230834706}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1692619360}
+        m_TargetAssemblyTypeName: SelectSkin, Assembly-CSharp
+        m_MethodName: SetSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &230834706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,7 +388,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2298939645060189070, guid: b4883605538b74f6cbcb9ecf1dda5074, type: 3}
+  m_Sprite: {fileID: -8979573976647544128, guid: c75670aadd6da4ef5b601be914a145cf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -817,7 +829,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7242686801062381260, guid: c42744d329b0346f1a82099cf0fa9c99, type: 3}
+  m_Sprite: {fileID: -2298939645060189070, guid: b4883605538b74f6cbcb9ecf1dda5074, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1255,6 +1267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 847c6f5fc6b27445da91bb68c952a7a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selected: 0
 --- !u!1 &1772759383
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,7 +1451,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1832855043}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1692619360}
+        m_TargetAssemblyTypeName: SelectSkin, Assembly-CSharp
+        m_MethodName: SetSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1832855043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1559,7 +1584,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1905069771}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1692619360}
+        m_TargetAssemblyTypeName: SelectSkin, Assembly-CSharp
+        m_MethodName: SetSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1905069771
 MonoBehaviour:
   m_ObjectHideFlags: 0
